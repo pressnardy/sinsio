@@ -1,0 +1,70 @@
+{% extends 'clients/index.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static 'clients/edit.css' %}">
+
+{% endblock %}
+
+{% block title %}Edit Client{% endblock %}
+
+{% block body %}
+
+<br>
+<br>
+<br>
+<section id="edit-wrapper">
+<h1 class="title">Edit Client</h1>
+<br>
+<form id="edit_form" method="POST" action="{% url 'clients:edit_client' client.id %}">
+	{% csrf_token %}
+	<div class="form-element">
+		<label>Name**<br>
+			{{ form.name }}
+		</label>
+	</div>
+	<div class="form-element">
+		<label>Reg No.**<br>
+			{{ form.registration_number }}
+		</label>
+	</div>
+	<div class="form-element">
+		<label>Policy No**.<br>
+			{{ form.policy_number }}
+		</label>
+	</div>
+	<div class="form-element">
+		<label class="date-label">Start Date**<br>
+			{{ form.start_date }}
+		</label>
+	</div>
+	<div class="form-element">
+		<label class="date-label">End Date<br>
+			{{ form.end_date }}
+		</label>
+	</div>
+	<div class="form-element">
+		<label class="date-label">
+			<span>Renewal Date</span>
+			{{ form.renewal_date }}
+		</label>
+	</div>
+	<div class="form-element">
+		<label>Amount**<br>
+			{{ form.amount }}
+		</label>
+	</div>
+	<div id="save-wrapper">
+		<label>
+			<input id="save" class="submit" type="submit" value="Save">
+		</label>
+	</div>
+
+</form>
+<form id="delete" action="{% url 'clients:delete' client.id %}" method="POST">
+	 {% csrf_token %}
+	<input class="delete" type="submit" value="Delete">
+</form>
+</section>
+{% endblock %}

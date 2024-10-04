@@ -1,0 +1,403 @@
+
+
+:root {
+    --purple: #56013b;
+    --dark-blue: #1bbbef;
+    --light-blue: #0680a8;
+    --background-baige: rgb(226, 238, 237);
+    --thin: 100;
+    --accent-color: #25D366;
+    --light-gray: #a9a9a9;
+}
+
+html, body {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    margin-right: 100vh;
+    padding-bottom: 150px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        border-bottom: 1px solid var(--light-gray);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 0 16px;
+    }
+
+
+    button.home.title {
+        font-weight: 800;
+        font-size: 32px;
+        color: var(--accent-color);
+        border: none;
+        background: none;
+    }
+
+    .logout {
+        font-size: 16px;
+        color: black;
+        font-weight: 600;
+    }
+
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        border: none;
+        background: none;
+    }
+
+
+    button.profile, button#logout {
+        background: none;
+        border: none;
+        color: black;
+    }
+
+
+    #clients, #section-search {
+        padding: 8px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .column-title {
+        min-width: 300px;
+    }
+
+    #registration-form, .clients-wrapper, #edit_form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+
+    }
+
+
+    .form-container, .client-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .clients-wrapper, .client-wrapper {
+        padding: 0 16px;
+        border-radius: 16px;
+
+    }
+
+
+    form#registration-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        border: 1px solid var(--dark-blue);
+        border-radius: 16px;
+        padding: 16px;
+    }
+
+
+    .form-element {
+        min-width: 350px;
+    }
+
+
+    #add-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    button#edit {
+        font-size: 32px;
+        text-align: center;
+        border: none;
+        background: none;
+        padding: 20px 4px;
+
+    }
+
+
+    .input-text {
+        font-size: 24px;
+        width: 340px;
+        border: none;
+        padding: 8px;
+        border-bottom: 1px solid var(--dark-blue);
+    }
+
+
+    .input-date {
+        font-size: 16px;
+        width: 245px;
+        border: none;
+        border-bottom: 1px solid var(--light-gray);
+        padding: 8px;
+        text-align: right;
+
+    }
+
+
+    .title {
+        font-size: 16px;
+        color: black;
+        font-weight: var(--thin);
+        padding-left: 4px;
+        text-align: center;
+
+    }
+
+
+    .column-headings {
+        display: flex;
+        gap: 16px;
+
+    }
+
+    /*clients list section*/
+    .all-clients > form {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        min-width: 40px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .client-heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .client-details {
+        display: flex;
+        gap: 16px;
+        border: 1px solid #d0cece;
+        border-radius: 8px;
+        padding: 8px;
+        background: white;
+
+    }
+
+    .client-amount {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    img.triangle-svg {
+        height: 16px;
+        width: 16px;
+    }
+
+    .edit-button {
+        background: white;
+        border: 1px solid #d0cece;
+    }
+
+    .client-name {
+        min-width: 150px;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+
+    .label {
+        font-size: 16px;
+    }
+
+
+    .element {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+
+    .reg-no, .policy-no, .amount {
+        min-width: 120px;
+        white-space: nowrap;
+    }
+
+
+    .date {
+        min-width: 120px;
+        white-space: nowrap;
+    }
+
+
+
+    .renewal-date {
+        font-size: 14px;
+    }
+
+    .all-details {
+        display: flex;
+        flex-direction: column;
+        min-width: 250px;
+    }
+
+    .client-detail {
+        padding: 4px 8px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .client-detail > span {
+        font-weight: 600;
+    }
+
+    .edit-button {
+        font-size: 16px;
+        padding: 0 8px;
+        width: 56px;
+        align-self: flex-end;
+        border-radius: 16px;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+
+    }
+
+    .amount-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .client-amount {
+        font-size: 16px;
+    }
+
+
+    .submit {
+        font-size: 28px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        margin: 16px 0;
+        border: 1px solid white;
+        background: var(--light-blue);
+        color: white;
+    }
+
+
+    .submit:hover {
+        background: none;
+        color: var(--light-blue);
+        border: 1px solid var(--light-blue);
+
+    }
+
+
+    .date-label {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    #amount {
+        text-align: right;
+        padding: 0 8px;
+    }
+
+
+    /*search form*/
+    #search-form {
+        display: flex;
+        min-width: fit-content;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+
+    input#query {
+        border: 1px solid black;
+    }
+
+    .category {
+        border: 1px solid red;
+    }
+
+
+    #add-client {
+        /*display: flex;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        text-align: center;
+        font-size: 40px;
+        color: white;
+        background: var(--accent-color);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: fixed;
+        left: 80vw;
+        bottom: 10vh;
+        border: none;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+    }
+
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        left: 0vw;
+        bottom: 0vh;
+        width: 100%;
+        padding: 0 16px;
+        color: white;
+        justify-self: flex-end;
+        border-top: 1px solid var(--light-gray);
+        z-index: 1;
+        background: #fcfcfc;
+    }
+
+
+    button.clients, button.search, button.notify {
+        font-size: 40px;
+        border: none;
+        background: none;
+    }
+
+
+    /*edit html*/
+    section#edit-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    form#delete > input {
+        background: red;
+    }
+
+
+    /*utility classes*/
+    .highlight-late {
+        padding: 0 8px;
+        border-bottom: 1px solid red;
+        background: #eeadad;
+        border-radius: 16px;
+    }
+}

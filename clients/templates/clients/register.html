@@ -1,0 +1,80 @@
+
+{% extends 'clients/index.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static 'clients/register.css' %}">
+{% endblock %}
+
+{% block title %}Add Clients{% endblock %}
+
+{% block body %}
+<br>
+<br>
+<br>
+<section id="client">
+	<div class="client-wrapper">
+		<div class="title">
+			Client Details
+		</div>
+		<br>
+		<div class="form-container">
+			<form id="registration-form" action="{% url 'clients:register' %}" method="POST">
+				{% csrf_token %}
+				<div class="form-element">
+					<label>Name**<br>
+						{{ form.name }}
+					</label>
+				</div>
+				<div class="form-element">
+					<label>Reg No.**<br>
+						{{ form.registration_number }}
+					</label>
+				</div>
+				<div class="form-element">
+					<label>Policy No**.<br>
+						{{ form.policy_number }}
+					</label>
+				</div>
+				<br>
+				<div class="form-element">
+					<label class="date-label">Start Date**<br>
+						{{ form.start_date }}
+					</label>
+				</div>
+				<div class="form-element">
+					<label class="date-label">End Date<br>
+						{{ form.end_date }}
+					</label>
+				</div>
+				<div class="form-element">
+					<label class="date-label">
+						<span>Renewal Date</span>
+						{{ form.renewal_date }}
+					</label>
+				</div>
+				<div class="form-element">
+					<label>Amount**<br>
+						{{ form.amount }}
+					</label>
+				</div>
+				<div class="form-element"  id="add-wrapper">
+					<label>
+						<input id="add" class="submit" type="submit" value="Add">
+					</label>
+				</div>
+			</form>
+			<br>
+			<form action="{% url 'clients:index' %}">
+				<label>
+					<input id="done" class="submit" type="submit" value="Done">
+				</label>
+			</form>
+			<div class="message">
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+

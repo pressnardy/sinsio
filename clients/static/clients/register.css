@@ -1,0 +1,83 @@
+
+:root {
+    --purple: #56013b;
+    --dark-blue: #1bbbef;
+    --light-blue: #0680a8;
+    --background-baige: rgb(226, 238, 237);
+    --thin: 100;
+    --accent-color: #25D366;
+    --light-gray: #a9a9a9;
+
+
+    --mobile-medium: 16px;
+    --mobile-small: 14px;
+}
+
+@media screen and (max-width: 600px) {
+
+    form#registration-form {
+        align-items: flex-start;
+        gap: 8px;
+        border: 1px solid var(--light-gray);
+        padding: 8px 16px;
+        box-sizing: content-box;
+        min-width: 250px;
+    }
+
+    div.form-element {
+        min-width: 250px;
+    }
+
+    label {
+        font-size: var(--mobile-medium);
+    }
+
+
+    input.input-text {
+        font-size: var(--mobile-medium);
+        border-bottom: 1px solid var(--light-gray);
+        font-weight: 600;
+        min-width: 200px;
+    }
+
+
+    input.input-date {
+        font-size: var(--mobile-small);
+    }
+
+
+    #add-wrapper {
+        align-self: center;
+    }
+
+
+    input#add.submit {
+        background: var(--accent-color);
+        font-size: var(--mobile-medium);
+    }
+
+    input#done {
+        background: none;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+        font-size: var(--mobile-medium);
+        font-weight: 600;
+    }
+
+    input.input-text {
+        width: 200px;
+    }
+
+    input.input-date {
+        width: 100px;
+    }
+
+    .title {
+        font-size: 24px;
+        /*font-weight: bold;*/
+    }
+
+    label {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,147 @@
+
+:root {
+    --mobile-medium: 16px;
+    --mobile-small: 14px;
+    --accent-color: #25D366;
+    --light-gray: #a9a9a9;
+}
+
+form#edit_form {
+    align-items: flex-start;
+    padding: 14px;
+    border: 1px solid var(--light-gray);
+    border-radius: 16px;
+}
+
+label {
+    font-size: var(--mobile-medium);
+}
+
+input.input-text {
+    font-size: var(--mobile-medium);
+    border-bottom: 1px solid var(--light-gray);
+    font-weight: 600;
+    width: 450px;
+}
+
+input.input-date {
+    font-size: var(--mobile-small);
+}
+
+#save-wrapper {
+    align-self: center;
+}
+
+input#save.submit {
+    background: var(--accent-color);
+    font-size: var(--mobile-medium);
+    font-size: 16px;
+    border-radius: 16px;
+    width: 80px;
+    padding: 4px 16px;
+
+}
+
+input#save.submit:hover {
+    background: none;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+input.delete {
+    padding: 4px 16px;
+    margin-top: 32px;
+    background: red;
+    color: white;
+    width: 80px;
+    border-radius: 16px;
+    border: 1px solid red;
+    font-size: 16px;
+}
+
+input.delete:hover {
+    border: 1px solid red;
+    background: none;
+    color: red;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    form#registration-form {
+        align-items: flex-start;
+        gap: 8px;
+        border: 1px solid var(--light-gray);
+        padding: 8px 16px;
+        box-sizing: content-box;
+        min-width: 250px;
+    }
+
+    form#edit_form {
+        align-items: flex-start;
+        padding: 14px;
+        border: 1px solid var(--light-gray);
+        border-radius: 16px;
+        padding: 16px;
+    }
+
+    div.form-element {
+        min-width: 250px;
+    }
+
+    label {
+        font-size: var(--mobile-medium);
+    }
+
+
+    input.input-text {
+        font-size: var(--mobile-medium);
+        border-bottom: 1px solid var(--light-gray);
+        font-weight: 600;
+        min-width: 250px;
+    }
+
+
+    input.input-date {
+        font-size: var(--mobile-small);
+    }
+
+
+    #add-wrapper {
+        align-self: center;
+    }
+
+
+    input#add.submit {
+        background: var(--accent-color);
+        font-size: var(--mobile-medium);
+    }
+
+    input#done {
+        background: none;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+        font-size: var(--mobile-medium);
+        font-weight: 600;
+    }
+
+    input.input-text {
+        width: 200px;
+    }
+
+    input.input-date {
+        width: 100px;
+    }
+
+    .title {
+        font-size: 24px;
+        /*font-weight: bold;*/
+    }
+
+    input.delete {
+        font-size: 16px;
+        border-radius: 16px;
+        width: 100px;
+        padding: 4px 16px;
+    }
+}

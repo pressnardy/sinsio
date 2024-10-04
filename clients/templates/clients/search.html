@@ -1,0 +1,79 @@
+{% extends 'clients/index.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static 'clients/search.css' %}">
+{% endblock %}
+
+{% block title %}Search{% endblock %}
+
+{% block body %}
+<br>
+<br>
+<br>
+<section id="section-search">
+	<div class="search-wrapper">
+		<form id="search-form" action="{% url 'clients:search' %}">
+			<div class="search-by sf-element">
+				<div class="category">{{ form.category }}</div>
+				<div id="query">{{ form.query }}</div>
+			</div>
+			<div>
+				<button type="submit" id="search-button" >Search</button>
+			</div>
+		</form>
+	</div>
+</section>
+<br>
+<section id="clients">
+	<div class="clients-wrapper">
+		<div class="title">
+			Clients Details
+		</div>
+		<div class="all-clients">
+			{% for client in results %}
+				<form class="client" action="{% url 'clients:edit_client' client.id %}" method="get">
+				<div class="client-heading">
+					<div class="client-name">{{ client.name }}</div>
+					<div class="renewal-date">{{ client.renewal_date }}</div>
+				</div>
+				<div class="amount-wrapper">
+					<div class="client-amount">
+						KES: {{ client.amount }}
+					</div>
+					<div class="more">
+						<img class="triangle-svg" src="{% static 'clients/svg/triangle_down.svg' %}">
+					</div>
+				</div>
+				<div class="all-details" style="display: none">
+					<label class="client-detail"> Registration Number:
+						<span>{{ client.registration_number }}</span>
+					</label>
+					<label class="client-detail"> Policy Number:
+						<span>{{ client.policy_number }}</span>
+					</label>
+					<label class="client-detail"> Start Date:
+						<span>{{ client.start_date }}</span>
+					</label>
+					<label class="client-detail"> End Date:
+						<span>{{ client.end_date }}</span>
+					</label>
+					<label class="client-detail"> Renewal Date:
+						<span>{{ client.renewal_date }}</span>
+					</label>
+					<button type="submit" class="edit-button">Edit</button>
+				</div>
+
+			</form>
+			{% endfor %}
+			{% if message %}
+				<h1 style="color: red;">{{ message}}</h1>
+			{% endif %}
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+
+

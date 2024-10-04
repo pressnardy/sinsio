@@ -1,0 +1,399 @@
+
+
+html, body {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+    min-height: fit-content;
+    width: 100%;
+    height: 100%;
+}
+
+
+:root {
+    --accent-color: #25D366;
+    --light-gray: #ababab;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--light-gray);
+    position: sticky;
+    top: 0;
+}
+
+.home {
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--accent-color);
+}
+
+
+button.register {
+    font-size: 16px;
+    background: none;
+    font-weight: bold;
+    border: none;
+
+}
+
+button.login {
+    font-size: 16px;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+
+.heading {
+    font-size: 24px;
+    text-align: center;
+
+}
+
+
+.title{
+    font-size: 24px;
+    border: none;
+    background: none;
+}
+
+
+nav > .buttons{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+
+}
+
+button {
+    font-size: 16px;
+}
+
+section#logging, section#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    gap: 16px;
+    font-size: 24px;
+}
+
+.input-text {
+    font-size: 24px;
+    min-width: 400px;
+    padding: 2px 4px;
+}
+
+
+input.form-control {
+    font-size: 24px;
+    min-width: 400px;
+    padding: 2px 4px;
+}
+
+
+button.form-submit {
+    font-size: 24px;
+    padding: 4px 8px;
+}
+
+#send-message {
+    background: none;
+    position: absolute;
+    left: 80vw;
+    bottom: 10vh;
+    border: none;
+    margin: 16px;
+
+}
+
+
+img#whatsapp {
+    width: 80px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0vw;
+    bottom: 0vh;
+    width: 100%;
+    padding: 8px 56px;
+    color: white;
+    justify-self: flex-end;
+    border-top: 1px solid var(--light-gray);
+}
+
+
+#search-client, #clients-group, #notify {
+    width: 40px;
+    border: none;
+    background: none;
+}
+
+
+button.notify, button.search, button.clients {
+    border: none;
+    background: none;
+}
+
+button#signup {
+    font-weight: 600;
+    padding: 4px 16px;
+    border-radius: 16px;
+    border: 1px solid var(--accent-color);
+    background: var(--accent-color);
+    color: white;
+}
+
+
+button#signup:hover {
+    background: none;
+    color: var(--accent-color);
+}
+
+
+form#sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    gap: 16px;
+}
+
+input#id_password1 {
+    font-size: 16px;
+     width: 300px;
+    border-radius: 32px;
+    padding: 4px 16px;
+}
+
+input#id_password2 {
+    font-size: 16px;
+    width: 300px;
+    border-radius: 32px;
+    padding: 4px 16px;
+}
+
+input.input-text {
+
+    font-size: 16px;
+    min-width: 300px;
+    padding: 2px 16px;
+    border-radius: 32px;
+}
+
+@media screen and (max-width: 600px) {
+
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        border-bottom: 1px solid var(--light-gray);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    button.home.title {
+        font-weight: 800;
+        font-size: 32px;
+        color: var(--accent-color);
+    }
+
+    button.register {
+        font-size: 16px;
+        background: none;
+        font-weight: bold;
+        border: none;
+
+    }
+
+    button.login {
+        font-size: 16px;
+        font-weight: bold;
+        background: none;
+        border: none;
+    }
+
+
+    .heading {
+        font-size: 24px;
+        text-align: center;
+
+    }
+
+
+    .title{
+        font-size: 24px;
+        border: none;
+        background: none;
+    }
+
+
+    nav > .buttons{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 32px;
+        padding: 0 16px;
+
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    section#logging {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#home {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+
+    label {
+        gap: 16px;
+        font-size: 16px;
+    }
+
+    input.input-text {
+        font-size: 24px;
+        min-width: 250px;
+        padding: 2px 16px;
+        border-radius: 32px;
+    }
+
+
+    button.form-submit {
+        font-size: 24px;
+        padding: 4px 8px;
+    }
+
+    #send-message {
+        background: none;
+        position: fixed;
+        left: 70vw;
+        bottom: 10vh;
+        border: none;
+        margin-right: 8vw;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 8px;
+        color: white;
+        border-top: 1px solid var(--light-gray);
+    }
+
+
+    button.clients, button.search, button.notify {
+        border: none;
+        background: none;
+    }
+
+    #search-client, #clients-group, #notify {
+        /*height: 40px;*/
+        width: 35px;
+        border: none;
+        background: none;
+    }
+    form#sign-up-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        gap: 16px;
+    }
+
+    input.input-text {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    label {
+        width: 200px;
+    }
+
+    input#email.input-text {
+        font-size: 16px;
+        width: 250px;
+    }
+
+    input#id_password1 {
+        font-size: 16px;
+         width: 250px;
+        border-radius: 32px;
+        padding: 4px 16px;
+    }
+
+    input#id_password2 {
+        font-size: 16px;
+        width: 250px;
+        border-radius: 32px;
+        padding: 4px 16px;
+    }
+
+    button#signup {
+        font-weight: 600;
+        padding: 4px 16px;
+        border-radius: 16px;
+        border: 1px solid var(--accent-color);
+        background: var(--accent-color);
+        color: white;
+    }
+}
+
+/*login*/
+
+@media screen and (max-width: 600px) {
+
+        input.form-control {
+        font-size: 16px;
+        min-width: 250px;
+        padding: 2px 16px;
+        border-radius: 16px;
+
+    }
+
+    form#login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button#login-button {
+        font-size: 16px;
+        background: var(--accent-color);
+        color: white;
+        width: 100px;
+        border-radius: 16px;
+        border: 1px solid var(--accent-color);
+    }
+}
