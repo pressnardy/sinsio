@@ -1,0 +1,45 @@
+{
+  "name": "Sinsio",
+  "short_name": "Sinsio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+
+    {
+      "src": "s.svg",
+      "sizes": "150x150",
+      "type": "image/svg",
+      "purpose": "any"
+    },
+    {
+      "src": "sicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+
+  ],
+
+  "screenshots": [
+    {
+      "src": "sinsio.png",
+      "sizes": "640x320",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Wonder Widgets"
+    },
+
+    {
+      "src": "sinsio.png",
+      "sizes": "640x320",
+      "type": "image/png",
+      "label": "Wonder Widgets"
+    }
+  ],
+
+  "description": "Sinsio for insurers"
+
+}
+

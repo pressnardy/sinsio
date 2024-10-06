@@ -22,9 +22,9 @@ import pwa.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('eccentric/clients/', include('clients.urls')),
-    path('eccentric/', include('eccentric.urls')),
-    path('', include('pwa.urls')),
+    path('clients/', include('clients.urls')),
+    path('', include('eccentric.urls')),
     # path('accounts/', include('django.contrib.auth.urls')),
 ]
+
 

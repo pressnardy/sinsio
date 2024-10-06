@@ -3,6 +3,9 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import CustomUserCreationForm, CustomAuthenticationForm
 from django.contrib.auth.forms import AuthenticationForm
 
+from django.conf import settings
+from django.templatetags.static import static
+import os
 
 # Create your views here.
 
@@ -45,3 +48,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('eccentric:home')
+
+
+
+
