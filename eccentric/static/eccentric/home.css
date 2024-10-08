@@ -431,4 +431,10 @@ input.input-text {
         border-radius: 16px;
         border: 1px solid var(--accent-color);
     }
+        button:active {
+        color: white;
+        background: lightgray;
+        border: 1px solid lightgray;
+    }
 }
+

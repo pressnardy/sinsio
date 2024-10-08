@@ -149,5 +149,11 @@ input.delete:hover {
     label.date-label {
         font-size: 16px;
         min-width: 230px;
+
+    }
+        button:active {
+        color: white;
+        background: lightgray;
+        border: 1px solid lightgray;
     }
 }

@@ -413,4 +413,9 @@ html {
         background: #eeadad;
         border-radius: 16px;
     }
+        button:active {
+        color: white;
+        background: lightgray;
+        border: 1px solid lightgray;
+    }
 }
