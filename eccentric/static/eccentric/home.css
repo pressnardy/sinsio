@@ -25,6 +25,7 @@ nav {
     border-bottom: 1px solid var(--light-gray);
     position: sticky;
     top: 0;
+    width: 100%;
 }
 
 .home {
@@ -76,6 +77,7 @@ button.login {
 
 #growth {
     width: 60vw;
+    max-width: 400px;
 }
 nav > .buttons{
     display: flex;
@@ -124,10 +126,10 @@ button.form-submit {
 #send-message {
     background: none;
     position: absolute;
-    left: 80vw;
+    left: 90vw;
     bottom: 10vh;
     border: none;
-    margin: 16px;
+    margin-right: 32px;
 
 }
 
@@ -308,7 +310,7 @@ input.input-text {
     #send-message {
         background: none;
         position: fixed;
-        left: 70vw;
+        left: 80vw;
         bottom: 10vh;
         border: none;
         margin-right: 8vw;

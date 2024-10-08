@@ -19,7 +19,7 @@
         align-items: flex-start;
         gap: 8px;
         border: 1px solid var(--light-gray);
-        padding: 8px 16px;
+        padding: 32px;
         box-sizing: content-box;
         min-width: 250px;
     }

@@ -5,6 +5,8 @@ const urlsToCache = [
     '/static/eccentric/svg/search.svg',
     '/static/eccentric/svg/whatsapp-chat.svg',
     '/static/s.svg',
+    '/doublearrow.svg',
+    '/growth.png',
     '/static/iconfavicon.png',
     '/static/sicon.svg',
     '/eccentric/home.html',
