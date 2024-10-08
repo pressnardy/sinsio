@@ -79,6 +79,7 @@ button.login {
     width: 60vw;
     max-width: 400px;
 }
+
 nav > .buttons{
     display: flex;
     flex-wrap: nowrap;
@@ -383,6 +384,24 @@ input.input-text {
         border: 1px solid var(--accent-color);
         background: var(--accent-color);
         color: white;
+    }
+
+/*landing page*/
+
+    .landing-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+        gap: 8px;
+        justify-self: center;
+    }
+
+    #growth {
+        width: 50vw;
+        max-width: 200px;
     }
 }
 
