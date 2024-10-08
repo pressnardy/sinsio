@@ -12,11 +12,11 @@
 	<link href="{% static 'eccentric/home.css' %}" rel="stylesheet">
 	<link href="{% static 'manifest.json' %}" rel="manifest">
 	<script defer src="{% static 'js/main.js' %}"></script>
-	<link rel="stylesheet" href="{% static 'clients/index.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'clients/index.css' %}"> -->
 
 </head>
 <body>
-	<nav>
+	<nav id="home-nav">
 		<div class="title">
 			<form action="{% url 'eccentric:home' %}">
 				<button class="title home" type="submit">Sinsio</button>
@@ -35,14 +35,31 @@
 	<section id="home">
 	{% block home %}
 		<div class="heading">
-			Seamlessly manage your clients
+			Your Clients on Your Palm
 		</div>
 		<br>
-		<section id="logging">
-			{% block logging %}
-			{% endblock %}
-		</section>
-
+		<br>
+		<div class="landing-page">
+		<div class="organize">
+			organize
+		</div>
+		<div class="arrow-down">
+			<img src="{% static 'doublearrow.svg' %}">
+		</div>
+		<div class="manage">
+			Manage
+		</div>
+		<div class="arrow-down">
+			<img src="{% static 'doublearrow.svg' %}">
+		</div>
+		<div class="grow">
+			Grow
+		</div>
+		<br>
+		<div>
+			<img id="growth" src="{% static 'growth.png' %}">
+		</div>
+	</div>
 		<form class="contact-us">
 			<button id="send-message">
 				<img id="whatsapp" src="{% static 'eccentric/svg/whatsapp-chat.svg' %}">
@@ -50,6 +67,7 @@
 		</form>
 	{% endblock %}
 	</section>
+
 	<footer>
 		<form action="{% url 'clients:index' %}" method="POST">
 			{% csrf_token %}

@@ -14,13 +14,25 @@ html, body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    min-width: fit-content;
+    /* min-width: fit-content; */
     width: 100%;
     height: 100%;
     overflow: scroll;
-    margin-right: 100vh;
+    /* margin-right: 100vh; */
     padding-bottom: 150px;
 }
+
+html {
+    overflow: scroll;
+}
+
+
+.scroll-button {
+    position: fixed;
+    bottom: 50px; 
+    right: 20px;
+    z-index: 2000; 
+  }
 
 
 @media screen and (max-width: 600px) {
@@ -32,7 +44,8 @@ html, body {
         border-bottom: 1px solid var(--light-gray);
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 99%;
+        padding: 0 16px;
         padding: 0 16px;
     }
 
@@ -363,7 +376,7 @@ html, body {
         position: fixed;
         left: 0vw;
         bottom: 0vh;
-        width: 100%;
+        width: 99%;
         padding: 0 16px;
         color: white;
         justify-self: flex-end;
@@ -374,7 +387,7 @@ html, body {
 
 
     button.clients, button.search, button.notify {
-        font-size: 40px;
+        font-size: 32px;
         border: none;
         background: none;
     }
