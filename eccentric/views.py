@@ -19,7 +19,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('eccentric:home')
+            return redirect('clients:index')
     else:
         form = CustomUserCreationForm()
     return render(request, 'eccentric/register.html', {'form': form})
