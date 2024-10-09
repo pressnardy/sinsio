@@ -39,6 +39,11 @@
 			<div class="title">ClIENT NAME</div>
 			<div class="title">RENEWAL DATE</div>
 		</div>
+		<div>
+			{% if not clients %}
+			<p style="font-size: 16px">Add Your First Client</p>
+			{% endif %}
+		</div>
 		<div class="all-clients">
 			{% for client in clients %}
 			<form class="client" action="{% url 'clients:edit_client' client.id %}" method="get">
